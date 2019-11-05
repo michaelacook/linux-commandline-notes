@@ -1,4 +1,5 @@
 # Introduction to the Linux Command Line
+
 * Most software regular users interact with has a graphical user interface (GUI)
 * Some software does not need a GUI, especially software that runs on servers, utilies, etc
 * The commandline, which by default is a program called Bash in Linux, provides a text-based interface to interact with non-GUI software
@@ -7,6 +8,7 @@
 * The shell you are using is likely the Bourne-again shell (Bash for short)
 
 ## General Command Syntax
+
 * Though some commands are longer or shorter than others, commands generally have three parts:
 1. Program name and command
 2. Options
@@ -35,6 +37,7 @@ an argument, it will list all the files and directories including hidden in the 
 * Long-form options cannot be combined without spaces the same way that shorthand options can
 
 ## Common Helpful Shortcuts
+
 * Tab completion: using the `tab` key when typing a command or a file name or path will cause Bash to autocomplete it for you, if there is
 only one thing you could be typing
 * `ctrl` + `c`: cancel a command
@@ -53,6 +56,7 @@ only one thing you could be typing
 * note: `^` caret character is shorthand for for `ctrl` key
 
 ## Finding Help for Commands
+
 * There is no need to memorize all commands, this would not be practical
 * Use the `$ man [command]` command to open the manual and read about how to use a certain command
 * You can also use the `--help` option with a command to view information about the specified command
