@@ -20,9 +20,10 @@
 * 'example.txt' is the argument. The argument is typically a file or folder having some action performed on it
 * Don't worry about the specifics of this example and what it means, it is intended only to illustrate the general structure of a command
 * Some commands require no options or arguments to function properly
-* E.g
-`$ ls`
+* E.g `$ ls`
 * This command will print a list of all the files and directories inside the directory you are currently in (called the "working directory")
+* First real command: `$ cd [path/to/dir]`
+* The `cd` command is used for changing directories into the folder you want to be in 
 * `ls` can take options and arguments however, in order to modify its default behaviour
 * E.g
 `$ ls -a [path/to/different/dir]`

@@ -2,13 +2,13 @@
 
 * On Linux, files generally have three sets of permissions that apply to the user, group, and all others in that order
 * Permissions refer to a user, group, or other's ability to read, write, and execute a file:
-* Read: read the file but not write
-* Write: change the file but not read
-* Execute: run the file with loading it to another program
+* **Read**: read the file but not write
+* **Write**: change the file but not read
+* **Execute**: run the file with loading it to another program
 * (note: a file is executable when it can be run without being loaded into another program)
 * The permissions for a file can be viewed by running `$ ls -l [file]`
-* Permissions are displayed symbolically or with octal digits, and they always take the form of groups of three
-* E.g `-rwxrwxrwx`
+* Permissions are displayed symbolically or with octal digits, and they always either take the form of three digits or groups of three characters
+* E.g `-rwxrwxrwx` 
 * In the example above, each section has three letters representing the permissions granted to each entity. In this case it is read, write and execute for all three: user, group, and others
 * In octal form, the same permission would read `777` with each digit representing a combination of permissions for each entity
 * Permissions can be changed with the `$ chmod [permission] [arg file]` command
@@ -84,4 +84,4 @@
 * Can change the ownership of a file using the `$ chown [username] [arg file]` command
 * E.g `$ sudo chown root example.txt` will change the ownership of the file to the root user
 * `sudo` has to be used because you need root privileges to change a file to root ownership
-* You can change the group that the file belongs to using the `$ chgrp [groupname] [arg file]` command 
+* You can change the group that the file belongs to using the `$ chgrp [groupname] [arg file]` command
