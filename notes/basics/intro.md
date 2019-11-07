@@ -23,7 +23,7 @@
 * E.g `$ ls`
 * This command will print a list of all the files and directories inside the directory you are currently in (called the "working directory")
 * First real command: `$ cd [path/to/dir]`
-* The `cd` command is used for changing directories into the folder you want to be in 
+* The `cd` command is used for changing directories into the folder you want to be in
 * `ls` can take options and arguments however, in order to modify its default behaviour
 * E.g
 `$ ls -a [path/to/different/dir]`
@@ -71,4 +71,4 @@ match the text you provide as an argument
 `$ apropos "list"`
 * You will get a list of results that match "list" and you should be able to find what you are looking for if it exists
 
-[Next]()
+[Next](files_folders_navigation.md)

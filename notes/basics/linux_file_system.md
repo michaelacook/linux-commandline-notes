@@ -19,3 +19,5 @@
 | media | where removable storage is mounted |
 | proc | virtual filesystem representing processes |
 | sys | virtual filesystem representing kernel values |
+
+[Previous](file_permissions.md)

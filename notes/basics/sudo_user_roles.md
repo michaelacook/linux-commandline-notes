@@ -25,3 +25,5 @@ root@computer-name:~#
 * Notice that the `$` is now replaced with a `#` and your username has been replaced with root instead
 * This is so that you know you are using root privileges
 * When you want to switch back out of root, run `$ exit`
+
+[Previous](files_folders_navigation.md) | [Next](file_permissions.md)

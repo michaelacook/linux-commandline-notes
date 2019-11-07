@@ -8,7 +8,7 @@
 * (note: a file is executable when it can be run without being loaded into another program)
 * The permissions for a file can be viewed by running `$ ls -l [file]`
 * Permissions are displayed symbolically or with octal digits, and they always either take the form of three digits or groups of three characters
-* E.g `-rwxrwxrwx` 
+* E.g `-rwxrwxrwx`
 * In the example above, each section has three letters representing the permissions granted to each entity. In this case it is read, write and execute for all three: user, group, and others
 * In octal form, the same permission would read `777` with each digit representing a combination of permissions for each entity
 * Permissions can be changed with the `$ chmod [permission] [arg file]` command
@@ -85,3 +85,5 @@
 * E.g `$ sudo chown root example.txt` will change the ownership of the file to the root user
 * `sudo` has to be used because you need root privileges to change a file to root ownership
 * You can change the group that the file belongs to using the `$ chgrp [groupname] [arg file]` command
+
+[Previous](sudo_user_roles.md) | [Next](linux_file_system.md) 
