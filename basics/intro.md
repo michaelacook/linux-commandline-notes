@@ -14,10 +14,9 @@
 2. Options
 3. Argument(s)
 * E.g
-`$ git commit -m "Example commit" example.txt`
+`$ git commit -m "Example commit"`
 * `git add` is the command, with 'git' being the program name and 'add' being the command
 * '-m' is the option (`-m` option refers to message, so it is followed by a message)
-* 'example.txt' is the argument. The argument is typically a file or folder having some action performed on it
 * Don't worry about the specifics of this example and what it means, it is intended only to illustrate the general structure of a command
 * Some commands require no options or arguments to function properly
 * E.g `$ ls`

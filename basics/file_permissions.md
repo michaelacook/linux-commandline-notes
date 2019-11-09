@@ -4,7 +4,7 @@
 * Permissions refer to a user, group, or other's ability to read, write, and execute a file:
 * **Read**: read the file but not write
 * **Write**: change the file but not read
-* **Execute**: run the file with loading it to another program
+* **Execute**: run the file without loading it to another program
 * (note: a file is executable when it can be run without being loaded into another program)
 * The permissions for a file can be viewed by running `$ ls -l [file]`
 * Permissions are displayed symbolically or with octal digits, and they always either take the form of three digits or groups of three characters
@@ -43,17 +43,17 @@
 
 * When you view permissions for a file, they usually display symbolically by default
 * Instead of the permissions for each entity being represented by a single digit, the permissions for each entity, user, group, others, are represented by a combination of up to three symbols: **r** for read, **w** for write, **x** for execute, **-** for no permission
-* Each symbolic permission is a string of nine characters not including the dash at the eginning
+* Each symbolic permission is a string of nine characters not including the dash at the eginning (which indicates the entity is a file)
 * E.g `-rwxr--r--` means the user can read, write and execute, the group can read but nothing else, and others can read but nothing else
 * Changing permissions with symbolic notation is a bit different from using octal notation
 * When using symbolic notation, each entity is specified individually
 * **u** stands for user, **g** stands for group, **o** stands for others, **a** stands for all
-* A + sign is used to add a permission, a - sign is used to subtract a permission, and the = sign is used to set a permission and erase any others
+* A '+' sign is used to add a permission, a '-' sign is used to subtract a permission, and the '=' sign is used to set a permission and erase any others
 * E.g if `example.txt` has a permission of `-rwxrw-r--` and we want to change its permissions to 1. take away execution powers for the user, 2. take away writing power for the group, and add execution and write power for all others, we would run the following command:
 `$ chmod u-x,g-w,o+wx`
 * Permissions for entities can be changed individually as well E.g `$ chmod u=r example.txt`
 * This will change only the user's permission but not the group or others
-* Using the = sign will erase any other permissions already set and replace them with the permission you specify, so if you want to add or subtract a permission without affecting others use the + or - signs
+* Using the = sign will erase any other permissions already set and replace them with the permission you specify, so if you want to add or subtract a permission without affecting others use the '+' or '-' signs
 
 
 ### Symbolic File Permissions
@@ -78,7 +78,7 @@
 
 ## File and Group Ownership
 
-* In the long form os `ls` there are two columns that show the user and group ownership for each file
+* In the long form `ls` there are two columns that show the user and group ownership for each file
 * The username in the first column owns the file and is the entity for which the first set of permissions for a file apply to
 * The group owner is the second column and the permissions in the second part of a permission apply to that group
 * Can change the ownership of a file using the `$ chown [username] [arg file]` command
@@ -86,4 +86,4 @@
 * `sudo` has to be used because you need root privileges to change a file to root ownership
 * You can change the group that the file belongs to using the `$ chgrp [groupname] [arg file]` command
 
-[Previous](sudo_user_roles.md) | [Next](linux_file_system.md) 
+[Previous](sudo_user_roles.md) | [Next](linux_file_system.md)
