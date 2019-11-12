@@ -45,7 +45,7 @@ ID
 * Another command for modifying data from a file or stream
 * Stands for "stream editor"
 * `sed` is helpful for changing data: the most basic function of `sed` is replacing one string with another
-* `$ sed [arg "character/entity/replacement/"]`
+* `$ sed [arg "character/entity/replacement/"] [arg file]`
 * `$ sed "s/Orange/Red" example.txt` will substitute each instance of "Orange" with "Red"
 * The 's' at the beginning stands for "substitute"
 
