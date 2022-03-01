@@ -10,6 +10,7 @@
 * Causes problems some times and you may need to be able to update this variable
 * In bash and other shells, `PATH` is a list of paths where the shell is told to look for files outisde the working directory
 * Bash uses the paths in the `PATH` variable to look for files needed to run programs even when the working directory is not in the directory where command line program files are located
+* To find the path where the executable or binary is for a program is located, run `which [command/program/script]`
 * Without the data in the `PATH` variable it would be necessary to provide the path to the program for every command you run
 * When you run a command, Bash looks for the files for the command you are running in the paths contained in the `PATH` environment variable
 * To find the path for a command's file run `$ which [commandname]`
