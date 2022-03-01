@@ -6,6 +6,7 @@
 
 ## `PATH`
 
+* View the `PATH` env variable with `echo $PATH`
 * Causes problems some times and you may need to be able to update this variable
 * In bash and other shells, `PATH` is a list of paths where the shell is told to look for files outisde the working directory
 * Bash uses the paths in the `PATH` variable to look for files needed to run programs even when the working directory is not in the directory where command line program files are located
