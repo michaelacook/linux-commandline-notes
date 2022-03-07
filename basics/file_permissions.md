@@ -12,6 +12,10 @@
 * In the example above, each section has three letters representing the permissions granted to each entity. In this case it is read, write and execute for all three: user, group, and others
 * In octal form, the same permission would read `777` with each digit representing a combination of permissions for each entity
 * Permissions can be changed with the `$ chmod [permission] [arg file]` command
+* Because directories are also files, they also have permissions
+* Reading a directory means listing the files and metadata in the directory 
+* Writing to the directory means putting new files in it 
+* Executing a directory means entering and traversing it
 
 ## Octal Permissions
 
