@@ -86,8 +86,32 @@
 * The username in the first column owns the file and is the entity for which the first set of permissions for a file apply to
 * The group owner is the second column and the permissions in the second part of a permission apply to that group
 * Can change the ownership of a file using the `$ chown [username] [arg file]` command
+* To change the ownership on all files in a directory you can use the recursive option: 
+  * `chown -R user1:user1 /home/user1` 
+  * This will set all files in a user's home directory as belonging to them and their group
 * E.g `$ sudo chown root example.txt` will change the ownership of the file to the root user
 * `sudo` has to be used because you need root privileges to change a file to root ownership
 * You can change the group that the file belongs to using the `$ chgrp [groupname] [arg file]` command
+
+## Initial Permissions using umask
+- When files are created initial permissions are assigned automatically
+- They are calculated based bitmask called *umask* 
+- View the umask with the command `umask` and use the `-S` option for symbolic representation
+- umask can have three or four characters 
+- The umask literally masks the initial permissions. To get the initial directory permissions from the umask subtract the umask value from 777 
+- To get the initial file permissions subtract the umask value from 666
+  - Executable permissions are not enabled on files by default
+- To change the umask run the command `umask [new umask value]`
+  - This only works for the current login session
+  - To persist the change it must be added to the `bashrc` file
+  - Add the command to change the umask to the bashrc file the same as you would on the terminal
+- To change the system-wide umask, change into `/etc/profile.d` and add a file called `umask.sh` 
+  - In the file add: 
+
+  ```bash 
+  if [ "$UID" -ge 1000 ] ;then 
+        umask 0002 
+  fi
+  ```
 
 [Previous](sudo_user_roles.md) | [Next](linux_file_system.md)
