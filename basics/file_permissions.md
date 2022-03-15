@@ -114,4 +114,32 @@
   fi
   ```
 
+## Special Bits: SUID & SGID
+- Additional permission bits for permissions on executable files and directories 
+- Files:
+  - Set user ID (SUID) - run executable as user owner of the file 
+  - Set group ID (SGID) - run executable as group owner of the file
+  - Sticky - Unix only - make an executable remain in swap memory to execute faster
+    - Not functional in Linux on files 
+  - When there is an `s` in the user owner permissions it means the SUID bit is set; when it is lowercase, the SUID bit is set; when it's uppercase, it is not
+    - `-rwsr-xr-x`
+    - `-rwSr-xr-x`
+  - The same applies when the `s` is present in the group owner permissions
+  - The SUID bit has a numeric value of 4 and is prepended to the regular numeric permission value 
+    - ie. `sudo chmod 4755 file.txt` 
+  - Symbolic mode can also be used: `sudo chmod u+s file.txt`
+  - The SGID bit has a numeric value of 2 and is prepended to the reuglar numeric permission value 
+    - ie. `sudo chmod 2755 file.txt` or `sudo chmod g+s file.txt`
+- You may want to know where files with elevated executable permissions are in the filesystem for security reasons
+  - run `sudo find / -perm -4000` to find all files with the SUID bit set 
+  - run `sudo find / -perm -2000` to find all files with the SGID bit set
+- Directories: 
+  - SUID has no effect on directories 
+  - SGID provides group inheritance on files and dirs created inside the directory
+  - Sticky can be set on directories
+  - Add a sticky bit to a directory's permissions by prepending it's numeric permission value with 1
+    - ie. `sudo chmod 1777 stickydir/`
+  - This prevents users from moving and deleting each other's files
+  - Generally used for world-writable directories like `/tmp`
+
 [Previous](sudo_user_roles.md) | [Next](linux_file_system.md)
