@@ -1,0 +1,13 @@
+# Variables 
+- Mainly used for shell scripting
+- Storing values for easy reference 
+- Can store number, character, or string of characters
+- No data types, do not need to be declared. They are simply assigned
+- Bourne Shell variables:
+  - $HOME - the current user's home directory
+  - $PS1 - the primary prompt string
+  - $PATH - a colon-separated list of directories where the shell looks for commands
+- Variables declared as follows: `test_variable="This is a test variable"`
+- Variables can be used as follows: `echo $test_variable`
+- Variables can also be assigned the text output of a command with the following syntax: 
+  - `my_var=$(ls -l)`
