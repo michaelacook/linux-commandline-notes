@@ -17,5 +17,6 @@ $ echo "hello" | wc
 * The output of `echo` which was 'hello' was sent to the `wc` command, which then output the word count
 * (note: `wc` counts an invisible character at the end of a line called a newline character)
 * You can pipe the output of any command to any other command to combine commands in infinite ways
+* note: You can re-run the last command by running `![command]` and all your arguments and options will be remembered
 
 [Previous](unix_philosophy.md) | [Next](text_tools.md)

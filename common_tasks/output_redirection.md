@@ -39,4 +39,10 @@ ls: cannot access 'notReal': No such file or directory
 * To append a stream output to a file rather than overwrite it, use `>>` rather than `>`
 * E.g `$ echo "some text" >> example.txt`
 
+## Passing file contents to a command
+- Just as you can redirect stdout to another stream or to a file, you can also pipe the contents of a file into a command 
+- E.g `grep lorem < lorem.txt`
+- You simply specify the command and then a left-pointing arrow and the file to read from
+- This can be useful but is less common than redirecting output to a file
+
 [Previous](archives.md) | [Next](environment_variables.md)
