@@ -20,5 +20,6 @@
 * Once you have opened `.profile` go to the bottom of the file and type
 `PATH="$PATH:/path/to/tool"` and give the path to the software that you want to be able to use on the command line
 * Save and close nano and restart your shell and you should be able to use your command line tool
+* on my Ubuntu 20.04 LTS installation system-wide PATH file is set in `/etc/environment`
 
 [Previous](output_redirection.md)| [Next](links.md)
